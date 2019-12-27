@@ -1,0 +1,18 @@
+﻿@model IEnumerable<NePisirsem.Models.MyRecipeViewModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@foreach (var item in Model)
+{
+    <div>
+        <h1>@item.MyRecipe.Name</h1>
+        @foreach(var ingr in @item.MyIngredients)
+        {
+            <h2>@ingr.Name</h2>
+        }
+    <hr />
+    </div>
+}
+

@@ -1,0 +1,39 @@
+﻿@model NePisirsem.Models.MyViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddRecipe">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="recipeId" class="control-label"></label>
+                <input asp-for="recipeId" class="form-control" />
+                <span asp-validation-for="recipeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="recipeName" class="control-label"></label>
+                <input asp-for="recipeName" class="form-control" />
+                <span asp-validation-for="recipeName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="recipeCategory" class="control-label"></label>
+                <input asp-for="recipeCategory" class="form-control" />
+                <span asp-validation-for="recipeCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Choose Ingredients</label>
+                <select asp-for="ingredientList" multiple="multiple" class="form-control"
+                        asp-items="ViewBag.ingredients">
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tarif Ekle" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
